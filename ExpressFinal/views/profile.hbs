@@ -1,0 +1,18 @@
+<h1>Profile</h1>
+<h2>{{user.FirstName}} {{user.LastName}}</h2>
+<br>
+<h2>{{user.Username}}</h2>
+<br>
+<h3>Write a post!</h3>
+<form method="POST">
+    <div>
+        <label for="postTitle">Post Title: </label>
+        <input type="text" name="postTitle">
+        <br>
+        <label for="postBody">Post Text: </label>
+        <input type="text" name="postBody">
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
