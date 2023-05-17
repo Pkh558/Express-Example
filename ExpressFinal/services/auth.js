@@ -25,11 +25,13 @@ var authService = {
       return null;
     }
   },
+  //returns hashed and salted password
   hashPassword: function(plainTextPassword) {
     let salt = bcrypt.genSaltSync(10);
     let hash = bcrypt.hashSync(plainTextPassword, salt);
     return hash;
   },
+  //compares submitted password to hashed password in db
   comparePasswords: function (plainTextPassword, hashedPassword) {
     return bcrypt.compareSync(plainTextPassword, hashedPassword)
   }
